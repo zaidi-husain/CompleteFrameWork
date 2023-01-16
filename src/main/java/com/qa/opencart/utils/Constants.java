@@ -11,4 +11,6 @@ public class Constants {
 
 	public static final String REGISTER_SHEET_NAME = "FILE";
 
+	public static final String ACC_PAGE_TITLE = null;
+
 }

@@ -19,6 +19,7 @@ public class LoginpageTest extends BaseTest {
 		String logintitle =loginpage.getPageTitle();
 		System.out.println("Actual title of LoginPage is :" + logintitle);
 		Assert.assertEquals(logintitle, Constants.LOGIN_PAGE_TITLE);
+		
 	}
 	
 	@Test
@@ -26,6 +27,7 @@ public class LoginpageTest extends BaseTest {
 		String loginUrl =loginpage.getCurrentUrl();
 		System.out.println("Actual Url of LoginPage is :" + loginUrl);
 		Assert.assertTrue(loginUrl.contains(Constants.LOGIN_PAGE_URL));
+		
 	}
 	
 	@Test

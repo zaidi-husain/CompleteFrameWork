@@ -5,13 +5,13 @@ import java.util.Properties;
 import org.openqa.selenium.chrome.ChromeOptions;
 import org.openqa.selenium.firefox.FirefoxOptions;
 
-public class OptionManager {
+public class OptionsManager {
 	
 	private Properties prop;
 	private ChromeOptions co;
 	private FirefoxOptions fo;
 	
-	public OptionManager(Properties prop) {
+	public OptionsManager(Properties prop) {
 		this.prop = prop;
 	}
 	
