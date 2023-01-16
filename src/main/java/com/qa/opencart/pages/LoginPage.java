@@ -12,9 +12,10 @@ public class LoginPage {
 	
 	//1. By locator = Object repository
 	//Locators should be private in nature
-	private By email = By.id("input-email");
-	private By password = By.id("input-password");
-	private By loginButton = By.xpath("//button[@type = 'submit']");
+	private By email = By.id("emailInput");
+	private By password = By.id("passwordInput");
+	private By loginButton = By.name("Submit");
+	////button[@type = 'submit']
 	private By forgotpassword = By.linkText("Forgotten Password");
 	
 	
@@ -37,10 +38,11 @@ public class LoginPage {
 	public boolean isForgotPwdLinkExists() {
 		return eleUtil.doIsDisplayed(forgotpassword);
 	}
-	public void doLogin(String un, String pwd) {
+	public HomePage doLogin(String un, String pwd) {
 		eleUtil.doSendKeys(email, un);
 		eleUtil.doSendKeys(password, pwd);
 		eleUtil.doClick(loginButton);
+		return new HomePage();
 	}
 	
 }
