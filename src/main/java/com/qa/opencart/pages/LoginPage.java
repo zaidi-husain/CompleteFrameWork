@@ -59,16 +59,18 @@ import io.qameta.allure.Step;
 public class LoginPage {
 
 	private WebDriver driver;
-	private ElementUtils elementUtil;
-
-	// 1. By Locators - PO - OR
-	private By emailId = By.id("input-email");
-	private By password = By.id("input-password");
-	private By loginButton = By.xpath("//input[@value='Login']");
-	private By forgotPwdLink = By.linkText("Forgotten Password");
-	private By registerLink = By.linkText("Register");
-
-	// 2. page constructor:
+	private ElementUtils eleUtil;
+	
+	//1. By locator = Object repository
+	//Locators should be private in nature
+	private By email = By.id("emailInput");
+	private By password = By.id("passwordInput");
+	private By loginButton = By.name("Submit");
+	////button[@type = 'submit']
+	private By forgotpassword = By.linkText("Forgotten Password");
+	
+	
+	//2. Page Constructor
 	public LoginPage(WebDriver driver) {
 		this.driver = driver;
 		elementUtil = new ElementUtils(driver);
@@ -111,7 +113,17 @@ public class LoginPage {
 		elementUtil.doClick(registerLink);
 		return new RegisterationPage();
 	}
+<<<<<<< HEAD
 
+=======
+	public HomePage doLogin(String un, String pwd) {
+		eleUtil.doSendKeys(email, un);
+		eleUtil.doSendKeys(password, pwd);
+		eleUtil.doClick(loginButton);
+		return new HomePage();
+	}
+	
+>>>>>>> 2fa92324c713eba86d63052e2cffc6df224931c2
 }
 
 
