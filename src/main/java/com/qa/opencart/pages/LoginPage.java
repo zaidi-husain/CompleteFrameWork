@@ -3,7 +3,8 @@ package com.qa.opencart.pages;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 
-import com.qa.opencart.utils.ElementUtils;
+import com.qa.opencart.utils.ElementUtil;
+
 //
 //public class LoginPage {
 //
@@ -59,7 +60,7 @@ import io.qameta.allure.Step;
 public class LoginPage {
 
 	private WebDriver driver;
-	private ElementUtils eleUtil;
+	private ElementUtil eleUtil;
 	
 	//1. By locator = Object repository
 	//Locators should be private in nature
@@ -73,7 +74,7 @@ public class LoginPage {
 	//2. Page Constructor
 	public LoginPage(WebDriver driver) {
 		this.driver = driver;
-		elementUtil = new ElementUtils(driver);
+		elementUtil = new ElementUtil(driver);
 	}
 
 	// 3. page actions/methods/features:
